@@ -2,15 +2,16 @@
 
 
 #app {
-  margin: 0 auto;
   font-weight: normal;
+  height: 100vh;
 }
 
 body{
   font-family: "Ubuntu Condensed", sans-serif;
-  display: flex;
+  display: grid;
   flex-direction: column;
-  align-items: center;
-  background-color: $medium;
+  background-color: $secondary;
+  color: $primary;
+  margin: 0;
 }
 

@@ -1,0 +1,14 @@
+@import "Colors";
+
+.button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 120px;
+  aspect-ratio: 1/1;
+  background-color: $light;
+  color: $secondary;
+  border-radius: 50%;
+  cursor: pointer;
+}
