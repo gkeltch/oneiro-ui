@@ -1,0 +1,18 @@
+<script setup lang="ts">
+
+</script>
+
+<template>
+  <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5" width="24" height="24" > <rect class="cls-637b8512f95e86b59c57a11c-1" x="1.5" y="1.5" width="21" height="21" rx="3.82"></rect><circle class="cls-637b8512f95e86b59c57a11c-1" cx="12" cy="12" r="4.77"></circle><circle class="cls-637b8512f95e86b59c57a11c-2" cx="18.2" cy="5.8" r="1.43"></circle></svg>
+</template>
+
+<style scoped lang="scss">
+.cls-637b8512f95e86b59c57a11c-1{
+  fill:none;stroke:currentColor;stroke-miterlimit:10;
+}
+.cls-637b8512f95e86b59c57a11c-2{
+  fill:currentColor;
+  color:currentColor;
+}
+
+</style>
