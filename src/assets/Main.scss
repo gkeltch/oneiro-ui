@@ -6,6 +6,11 @@
   height: 100vh;
 }
 
+.panel{
+  display: grid;
+  margin-top:48px ;
+}
+
 body{
   font-family: "Ubuntu Condensed", sans-serif;
   display: grid;

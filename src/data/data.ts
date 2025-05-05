@@ -17,6 +17,13 @@ const data = {
       image:"/dream3.jpg"
     }
   ],
+  user:{
+    email:"gracie@apotomelabs.com",
+    firstname:"Gracie",
+    lastname:"Keltch",
+    profilePicture:"/profile.jpg",
+    recentEmotions:["happiness", "calm", ]
+  },
   aboutDescShort:"Unlock the world within your dreams with Somna. Your simple, private digital journal to easily capture, reflect on, and discover patterns in your nightly adventures.",
   aboutDescLong:"Dive into the fascinating landscape of your subconscious with Somna, your dedicated dream journal. Dreams offer a unique window into our minds, but they fade quickly. Somna provides an easy, private space to record your experiences before they vanish. Track recurring themes, moods, and symbols over time, and begin to uncover the hidden patterns and insights waiting within your dreams. Start your journey of self-discovery, one night at a time.",
   aboutDescLong2: "Your dreams are a hidden world, rich with symbols, stories, and emotions. But how often do these intricate narratives slip away just moments after waking? Somna is designed to be your trusted companion on the journey into this personal, inner landscape.",

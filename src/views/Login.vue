@@ -1,4 +1,14 @@
 <script setup lang="ts">
+import {GoogleLogin} from "vue3-google-login";
+import router from "@/router";
+
+const callback = (response) => {
+
+  console.log("Handle the response", response)
+}
+const loginClick=function (){
+  router.push("/account")
+}
 
 </script>
 
@@ -12,7 +22,11 @@
       <div class="formBody">
         <div class="title">LOGIN</div>
         <div>Login in to track dreams, discover hidden meanings, and uncover complex emotions.</div>
-        <div class="button">Log In with Google</div>
+        <GoogleLogin :callback="callback"/>
+        <div v-for="color in colors" :key="color">{{color}}</div>
+        <RouterLink to="/account">
+          <div class="button">Log In with Google</div>
+        </RouterLink>
       </div>
 
     </div>

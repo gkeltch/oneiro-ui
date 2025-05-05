@@ -1,11 +1,6 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
-import Card from "@/components/Card.vue";
-import CardReverse from "@/components/CardReverse.vue";
-import data from "@/data/data.ts";
-import MenuIcon from "@/components/icons/MenuIcon.vue";
-import SearchIcon from "@/components/icons/SearchIcon.vue";
+
 import Navbar from "@/components/Navbar.vue";
 </script>
 
