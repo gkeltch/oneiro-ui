@@ -4,6 +4,8 @@ import SettingsIcon from "@/components/icons/SettingsIcon.vue";
 import PlusIcon from "@/components/icons/PlusIcon.vue";
 import Chroma from "@/components/Chroma.vue";
 import data from "@/data/data.ts";
+import {ref} from "vue";
+const date=ref(new Date());
 </script>
 
 <template>
@@ -13,7 +15,7 @@ import data from "@/data/data.ts";
       <Chroma/>
       <div class="profilePic"></div>
       <div class="tags">
-        <div class="tag" v-for="tag in data.user.recentEmotions">{{tag}}</div>
+        <div class="tag" v-for="tag in data.user.recentEmotions">{{ tag }}</div>
       </div>
       <div class="icon">
         <SettingsIcon/>
@@ -23,12 +25,15 @@ import data from "@/data/data.ts";
       <div class="plusIcon">
         <PlusIcon/>
       </div>
-      <div class="calender"></div>
+      <div class="calender">
+        <VDatePicker transparent borderless expanded view="weekly" v-model="date"/>
+      </div>
 
     </div>
-    <div class="entries"><div class="journals">
-
-    </div>
+    <div class="entries">
+      <div class="journal" v-for="journal in data.journals">
+      {{ journal}}
+      </div>
     </div>
 
   </div>
@@ -36,8 +41,7 @@ import data from "@/data/data.ts";
 </template>
 
 <style scoped lang="scss">
-.header
-{
+.header {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -46,30 +50,30 @@ import data from "@/data/data.ts";
   position: relative;
   background-color: white;
 }
-.profilePic
-{
+
+.profilePic {
   background-image: url("/profile.jpg");
-  height:175px;
-  width:175px;
+  height: 175px;
+  width: 175px;
   border-radius: 50%;
   background-position: center 30%;
-  background-size:cover;
+  background-size: cover;
   z-index: 1;
   position: relative;
   margin: 12px;
 }
-.panel
-{
-  display:grid;
+
+.panel {
+  display: grid;
 }
 
-.tags{
+.tags {
   width: 50%;
   display: flex;
   justify-content: center;
 }
 
-.tag{
+.tag {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -83,5 +87,14 @@ import data from "@/data/data.ts";
   border: 2px solid black;
   margin-right: 12px;
 }
+.controls {
+  width: 50%;
+  display: flex;
+  justify-self: center;
+  justify-content: center;
 
+}
+.calender {
+  width: 100%;
+}
 </style>
