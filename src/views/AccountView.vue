@@ -5,6 +5,7 @@ import PlusIcon from "@/components/icons/PlusIcon.vue";
 import Chroma from "@/components/Chroma.vue";
 import data from "@/data/data.ts";
 import {ref} from "vue";
+import JournalCard from "@/components/JournalCard.vue";
 const date=ref(new Date());
 </script>
 
@@ -31,9 +32,9 @@ const date=ref(new Date());
 
     </div>
     <div class="entries">
-      <div class="journal" v-for="journal in data.journals">
-      {{ journal}}
-      </div>
+      <JournalCard class="journal" v-for="(journal,index) in data.journals" :name="journal.name" :key="index">
+
+      </JournalCard>
     </div>
 
   </div>
@@ -41,6 +42,7 @@ const date=ref(new Date());
 </template>
 
 <style scoped lang="scss">
+@import"../assets/Colors";
 .header {
   display: flex;
   flex-direction: column;
@@ -97,4 +99,13 @@ const date=ref(new Date());
 .calender {
   width: 100%;
 }
+.entries
+{
+  display:grid;
+  grid-template-columns: repeat(3,1fr);
+  padding:12px;
+  grid-gap: 12px;
+
+}
+
 </style>
